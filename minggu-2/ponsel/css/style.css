@@ -1,0 +1,62 @@
+h1{
+    border: 1px solid;
+    width: 550px;
+    margin: 10px auto;
+    border-radius: 20px;
+    background: aquamarine;
+    
+    
+}
+#hp{
+    width: 400px;
+    background: lightblue;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 30px;
+    
+}
+
+#hp div{
+    padding: 10px;
+    border: 1px solid white;
+    
+}
+
+#hp div .nama-ponsel{
+    display: block;
+    color: blue; 
+    
+}
+
+#hp div .nama-ponsel::before{
+    content: "Nama:  "
+}
+
+
+#hp div .harga-ponsel{
+    display: block;
+    color: red;
+}
+
+#hp div .harga-ponsel::before{
+    content: "Harga:  "
+}
+
+#hp div .ram-ponsel{
+    display: block;
+    color:  green;
+}
+
+#hp div .ram-ponsel::before{
+    content: "RAM:  "
+}
+
+#hp div .storage-ponsel{
+    display: block;
+    color: blueviolet;
+}
+
+#hp div .storage-ponsel::before{
+    content: "Storage:  "
+}
+

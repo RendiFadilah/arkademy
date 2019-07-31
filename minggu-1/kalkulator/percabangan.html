@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/percabangan.css">
+</head>
+<body>
+    <center><h1 class="kalku">Kalkulator Sederhana</h1></center>
+    <div class="kalkulator">
+    <div class="pertambahan">
+        <h3>Pertambahan</h3>
+        <input id="pert1" class="tambah" placeholder="Masukkan Bilangan Pertama"/><br/>
+        <input id="pert2" class="tambah" placeholder="Masukkan Bilangan Kedua"/><br/>
+        <p>HASILNYA ADALAH . . .</p>
+        <p id="hasilpertambahan"></p>
+        <button class="tambah" onclick="pertambahan()">PERTAMBAHAN</button>
+        <hr align="right">
+    </div>
+    
+    <div class="perkalian">
+        <h3>Perkalian</h3>
+        <input id="perk1" class="tambah" placeholder="Masukkan Bilangan Pertama"/><br/>
+        <input id="perk2" class="tambah" placeholder="Masukkan Bilangan Kedua"/><br/>
+        <p>HASILNYA ADALAH . . .</p>
+        <p id="hasilperkalian"></p>
+        <button class="tambah" onclick="perkalian()">PERKALIAN</button>
+        <hr align="right">
+    </div>
+    
+    <div class="pembagian"> 
+        <h3>Pembagian</h3>
+        <input id="pemb1" class="tambah" placeholder="Masukkan Bilangan Pertama"/><br/>
+        <input id="pemb2" class="tambah" placeholder="Masukkan Bilangan Kedua"/><br/>
+        <p>HASILNYA ADALAH . . .</p>
+        <p id="hasilpembagian"></p>
+        <button class="tambah" onclick="pembagian()">PEMBAGIAN</button>
+        <hr align="right">
+    </div>
+    </div>
+    
+
+    <script>
+        function pertambahan() {
+            var angka1 = parseInt (document.getElementById("pert1").value)
+            var angka2 = parseInt (document.getElementById("pert2").value)
+            var hasilpertambahan = angka1 + angka2;
+            document.getElementById('hasilpertambahan').innerHTML = hasilpertambahan;
+        }
+
+        function perkalian() {
+            var angka1 = parseInt (document.getElementById("perk1").value)
+            var angka2 = parseInt (document.getElementById("perk2").value)
+            var hasilperkalian = angka1 * angka2;
+            document.getElementById('hasilperkalian').innerHTML = hasilperkalian;
+        }   
+
+        function pembagian() {
+            var angka1 = parseInt (document.getElementById("pemb1").value)
+            var angka2 = parseInt (document.getElementById("pemb2").value)
+            var hasilpembagian = angka1 / angka2;
+            document.getElementById('hasilpembagian').innerHTML = hasilpembagian;
+        }
+    </script>
+    </body>
+</html>
