@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toko Online Jam</title>
+    <style>
+    
+    body{
+        background-image: url("assets/img/tes.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+    }
+    marquee{
+        color: orange;
+    }
+    h1{
+        border: 1px solid black;
+        color: white;
+        width: 800px;
+        margin: auto;
+        background-color: palegreen;
+        color: white;
+        border-radius: 20px;
+        animation-name: gantiwarna;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+    }
+
+        @keyframes gantiwarna{
+            0%      {background-color: red; left:0px; top:0px;}
+            25%     {background-color: yellow; left:200px; top: 0px;}
+            50%     {background-color: green; left: 200px; top: 0px;}
+            75%     {background-color: blue; left:0px; top: 200px;}
+            100%    {background-color: orange; left: 0px; top: 0px;}
+        }
+    #item-list{
+        display: flex;
+        flex-wrap: wrap;    
+    }
+    
+    .nameitem{
+        color: white;
+    }
+    .nameitem::before{
+        content: "Nama: "
+    }
+    .hargaitem{
+        color: #483D8B;
+    }
+    .hargaitem::before{
+        content: "Harga: "
+    }
+    .jenisitem{
+        color: yellow;
+    }
+    .jenisitem::before{
+        content: "Type: "
+    }
+    .warnaitem{
+        color: black;
+    }
+    .warnaitem::before{
+        content: "Warna: "
+    }
+
+    .item{
+        flex: 1;
+        background: red;
+        margin: 30px;
+        text-align: center;
+        border: 5px groove;
+        border-radius: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+    }
+    .item:hover{
+        background: orange;
+    }
+    
+
+    .item .gambar img{
+        width: 150px;
+        height: 150px;
+        flex-wrap: wrap;
+        margin: 10px;
+        border-radius: 200px;
+    }
+    .item .gambar img:hover{
+        width: 250px;
+        height: 250px;
+        transition: width 2s, height 2s;
+    }
+   
+    </style>
+</head>
+<body>
+    <h1><center>JAM TANGAN FOR NAX MILLENIAL</center></h1>
+    <div id="item-list"></div>
+    <script>
+    let item = [ 
+    {
+        "nama":"Casio",
+        "harga":"Rp 750.000",
+        "gambar":"assets/img/1.jpg",
+        "jenis":"Casio MTP-1314L",
+        "warna":"Black"   
+    },
+    {
+        "nama":"Expedition",
+        "harga":"800.000",
+        "gambar":"assets/img/2.jpg",
+        "jenis":"Expedition E6720",
+        "warna":"Silver"  
+   },
+   {
+        "nama":"Fossil",
+        "harga":"1.000.000",
+        "gambar":"assets/img/3.jpg",
+        "jenis":"Fossil ME3062",
+        "warna":"Black"  
+   },
+   {
+        "nama":"Orient",
+        "harga":"1.200.000",
+        "gambar":"assets/img/4.jpg",
+        "jenis":"Orient FDD03003Y",
+        "warna":"Black"  
+   },
+   {
+        "nama":"Quick Silver",
+        "harga":"150.000",
+        "gambar":"assets/img/5.jpg",
+        "jenis":"Quicksilver Full",
+        "warna":"Silver Brown"  
+   },
+   {
+        "nama":"Seiko",
+        "harga":"1.000.000",
+        "gambar":"assets/img/6.jpg",
+        "jenis":"Seiko 5",
+        "warna":"Silver"
+   },
+   {
+         "nama":"Alba",
+        "harga":"699.999",
+        "gambar":"assets/img/7.jpg",
+        "jenis":"Alba for Anak Muda",
+        "warna":"Black White"
+   },
+   {
+         "nama":"Casio",
+        "harga":"1.000.000",
+        "gambar":"assets/img/8.jpg",
+        "jenis":"Casio G-Shock",
+        "warna":"Black"
+   },
+   {
+        "nama":"Casio",
+        "harga":"600.000",
+        "gambar":"assets/img/9.jpg",
+        "jenis":"Casio Edifice",
+        "warna":"Silver"
+   },
+   {
+        "nama":"Timex",
+        "harga":"1.000.000",
+        "gambar":"assets/img/10.jpg",
+        "jenis":"Timex Weekender",
+        "warna":"Brown"
+   },
+   {
+    "nama":"Tissot",
+        "harga":"4.250.000",
+        "gambar":"assets/img/11.jpg",
+        "jenis":"Tissot for Nax Muda",
+        "warna":"Silver"
+   },
+   {
+    "nama":"Aigner",
+        "harga":"3.965.000",
+        "gambar":"assets/img/12.jpg",
+        "jenis":"Aigner For Nax Muda",
+        "warna":"Black"
+   },
+   {
+    "nama":"Nixon",
+        "harga":"1.000.000",
+        "gambar":"assets/img/13.jpg",
+        "jenis":"Nixon for Anak Muda",
+        "warna":"Gold"
+   },
+   {
+    "nama":"Expidition",
+        "harga":"1.000.000",
+        "gambar":"assets/img/14.jpg",
+        "jenis":"Expi For Anak Muda",
+        "warna":"Silver"
+   },
+   {
+    "nama":"Lanccelot",
+        "harga":"1.000.000",
+        "gambar":"assets/img/15.jpg",
+        "jenis":"Lancelot Matador",
+        "warna":"Brown"
+   },
+   {
+    "nama":"Emporio Armani",
+        "harga":"1.000.000",
+        "gambar":"assets/img/16.jpg",
+        "jenis":"Empor For Nax Muda",
+        "warna":"Silver"
+   },
+   {
+    "nama":"Alba",
+        "harga":"1.000.000",
+        "gambar":"assets/img/17.jpg",
+        "jenis":"Jordi Alba",
+        "warna":"Silver Black;"
+   },
+   {
+    "nama":"Suunto",
+        "harga":"1.000.000",
+        "gambar":"assets/img/18.jpg",
+        "jenis":"Sunoto",
+        "warna":"Black;"
+   },
+   {
+    "nama":"Police",
+        "harga":"1.500.000",
+        "gambar":"assets/img/19.jpg",
+        "jenis":"Seiko 5",
+        "warna":"Silver"
+   },
+   {
+    "nama":"Citizen",
+        "harga":"1.600.000",
+        "gambar":"assets/img/20.jpg",
+        "jenis":"Citikus",
+        "warna":"None"
+   }
+
+];
+for(x in item){
+    var namaItem = item[x].nama;
+    let hargaItem = item[x].harga;
+    let gambarItem = item[x].gambar;
+    let jenisItem = item[x].jenis;
+    let warnaItem = item[x].warna;
+
+    document.getElementById('item-list').innerHTML +="\
+<div class='item'>\
+    <div class='gambar'><img src='"+gambarItem+"'  alt=''/></div>\
+    <div class='nameitem'>"+namaItem+"</div>\
+    <div class='hargaitem'>"+hargaItem+"</div>\
+    <div class='jenisitem'>"+jenisItem+"</div>\
+    <div class='warnaitem'>"+warnaItem+"</div>\
+</div>\
+";
+if(((x+1)/5)===0) {
+    document.getElementById('item-list').innerHTML +="\
+    <div class='pemisah'></div>\
+    ";
+    }      
+}
+    </script>
+    <marquee><h2>JAM TANGAN MURAHNYA KAK~</h2></marquee>
+</body>
+</html>
