@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+     <div id="hilang">
+        <h1><center>FORM PENDAFTARAN</center></h1>
+  
+    <div class="kotak">
+    <label for="#" class="nm">Nama</label>
+    <input type="text" name="name" id="name" class="name" placeholder="Nama Lengkap">
+    <br>
+
+    <label for="#" class="kls">Kelas</label>
+    <input type="text" name="kelas" id="kelas" class="kelas" placeholder="Kelas">
+    <br>
+
+    <label for="#" class="eml">Email</label>
+    <input type="email" name="email" id="email" class="email" placeholder="Email">
+    <br>
+
+    <label for="#" class="almt">Alamat</label>
+    <input type="text" name="alamat" id="alamat" class="alamat" placeholder="Alamat">
+    <br>
+    <button onclick="validasi()">Lihat Hasil</button>
+    </div>
+    </div>
+    <div id="hasil"></div>
+
+
+
+    <script>
+        function validasi(){
+    var name = document.getElementById("name").value;
+    var kelas = document.getElementById("kelas").value;
+    var email = document.getElementById("email").value;
+    var alamat = document.getElementById("alamat").value;
+
+    document.getElementById("hasil").innerHTML = "YEAY BERHASIL!"+" " + "Terimakasih"+ " " + name +" "+ "Kelas"+" " + kelas+" " + "Telah mendaftar , untuk informasi selanjutnya akan di kirimkan melalui"+ " " + email +" "+ "dan kartu tanda peserta akan dikirimkan ke alamat"+ " " + alamat;
+
+    var berubah = document.getElementById("hilang");
+  if (berubah.style.display === "none") {
+    berubah.style.display = "block";
+  } else {
+    berubah.style.display = "none";
+  }
+     
+
+        }    
+
+    </script>
+</body>
+</html>

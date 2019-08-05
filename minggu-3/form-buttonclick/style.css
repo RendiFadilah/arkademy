@@ -1,0 +1,80 @@
+#hasil{ 
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: green
+}
+
+.nm{
+    margin-left: 20px;
+}
+
+.name{
+    width: 250px;
+    margin: 5px;
+    margin-left: 40px;
+    padding: 5px;
+}
+
+.kls{
+    margin-left: 20px;
+}
+
+.kelas{
+    width: 250px;
+    margin: 5px;
+    margin-left: 43px;
+    padding: 5px;
+}
+
+.eml{
+    margin-left: 20px;
+}
+
+.email{
+    width: 250px;
+    margin: 5px;
+    margin-left: 40px;
+    padding: 5px;
+}
+
+.almt{
+    margin-left: 20px;
+}
+
+.alamat{
+    width: 250px;
+    margin: 5px;
+    margin-left: 30px;
+    padding: 5px;
+}
+
+button{
+    background: lightblue;
+    margin: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background: blue;
+}
+#hilang{
+    border: 1px solid black;
+    width: 400px;
+    margin: 80px auto;
+    background: lightblue;
+    border-radius: 5px;
+}
+
+h1{
+    border: 1px solid;
+    width: 380px;
+    margin: 10px auto;
+    background: blue;
+    border-radius: 20px;
+}
+
+body{
+    background: black;
+}
