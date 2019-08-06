@@ -1,0 +1,74 @@
+h1{
+    border: 1px solid gray;
+    width: 60%;
+    background: #FAEBD7;
+    border-radius: 30px;
+}
+
+.body{
+    border: 1px solid rgb(139, 137, 137);
+    border-radius: 20px;
+    width: 40%;
+    height: 50%;
+    margin: auto;
+    padding: 5px;
+    background: 	#FFEBCD 
+    
+}
+
+.biodata{
+    
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    width: 330px;
+    height: 260px;
+    background:  #FFE4C4;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+img{
+    width: 130px;
+    height: 130px;
+    top: 2px;
+    margin: 13px;
+    margin-left: 30px;
+    border: 1px solid black;
+    margin-top: 0px;
+    border-radius: 20px;
+    
+}
+
+h3{
+    margin: 5px;
+    margin-left: 65px;
+    padding: 5px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    
+}
+
+h2 {
+    padding: 20px;
+}
+
+#nama::before{
+    content: "Nama: "
+}
+
+#kelas::before{
+    content: "Kelas: "
+}
+
+#sekolah::before{
+    content: "Sekolah: "
+}
+
+#nohp::before{
+    content: "Nomor HP: "
+}

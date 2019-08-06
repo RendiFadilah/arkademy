@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="body">
+    <center><h1>MY BIODATA</h1></center>
+
+    <div class="biodata">
+        <img src="assets/img/rendi.jpg" alt="">
+        <div id="nama"></div>
+        <div id="kelas"></div>
+        <div id="sekolah"></div>
+        <div id="nohp"></div>
+    
+    </div>
+    
+    <div class="hobi">
+        <img src="assets/img/coding.png" alt="">
+        <img src="assets/img/dev.jpg" alt="">
+        <img src="assets/img/igrendi.jpg" alt="">
+    </div>
+
+    
+    <script>
+        let data = {
+            nama:"Rendi Fadilah",
+            kelas:"XI-RPL 1",
+            sekolah:"SMK Jakarta Pusat 1",
+            noHP:"08823947715",
+        
+        }
+
+        let nama = document.getElementById('nama');
+        let kelas = document.getElementById('kelas');
+        let sekolah = document.getElementById('sekolah');
+        let noHP = document.getElementById('nohp');
+        let hobi = document.getElementById('hobi');
+
+        nama.innerHTML = data.nama
+        kelas.innerHTML = data.kelas
+        sekolah.innerHTML = data.sekolah
+        noHP.innerHTML = data.noHP
+        hobi.innerHTML = data.hobi
+    </script>
+</body>
+</html> 
