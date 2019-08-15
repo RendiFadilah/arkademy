@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Online Shop</title>
+  <style>
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    width:800px;
+    margin: 0 auto;
+  }
+  .item{
+    background: rgba(0,0,0,0.1);
+    display: block;
+    flex-direction: row;
+    min-height: 200px;
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .item .picture{
+    flex:1;
+    height: auto;
+    width: 20%;
+    background: rgba(0,0,0,0.1);
+    display: block;
+    margin: 10px;
+    justify-content: center;
+  
+  }
+
+  .item .picture .text{
+
+    float: left;
+  }
+  .item .picture2 .thumb{ 
+    width: 20%;
+    margin: 10px;
+  }
+
+  .item .picture .thumb .text{
+    display: flex;
+  
+  }
+  .item .picture3 .thumb{
+    width: 20%;
+    margin: 10px;
+  }
+  .item .picture .thumb{
+    display: block;
+    width: 100%;
+  }
+
+
+  
+  
+  </style>
+</head>
+<body>
+  <div id="item-list">
+  </div>
+  <script>
+    let data = [
+      {
+        "name":"Jam Tangan",
+        "description":"Jam tangan adalah untuk bergaya",
+        "price":350000,
+        "image":[
+          "assets/1.jpg",
+          "assets/2.jpg",
+          "assets/3.jpg"
+        ],
+        "rating":[
+          "0","1","21","6","22"
+        ]
+      },
+      {
+        "name":"Sepatu",
+        "description":"Sepatu Converse Original Cocok Untuk Anak Muda",
+        "price":700000,
+        "image":[
+          "assets/converse1.jpg",
+          "assets/converse2.jpg",
+          "assets/converse3.jpg"
+        ],
+        "rating":[
+          "0","50","1","2","10"
+        ]
+      },
+      {
+        "name":"Tas",
+        "description":"Tas Converse Original Cocok Untuk Anak Muda",
+        "price":300000,
+        "image":[
+          "assets/tasconverse1.jpg",
+          "assets/tasconverse2.jpg",
+          "assets/tasconverse3.jpg"
+        ],
+        "rating":[
+          "12","0x`x`","0","0","5"
+        ]
+      },
+      {
+        "name":"HandPhone Xiaomi",
+        "description":"HP Xiaomi Terbaru Keren",
+        "price":2500000,
+        "image":[
+          "assets/xiaomi2.jpg",
+          "assets/xiaomi6x.jpg",
+          "assets/xiaomi8.jpg"
+        ],
+        "rating":[
+          "0","0","1","3","8"
+        ]
+      },
+      {
+        "name":"Book",
+        "description":"As a physical object, a book is a stack of usually rectangular pages (made of papyrus, parchment, vellum, or paper) oriented with one edge tied, sewn, or otherwise fixed together and then bound to the flexible spine of a protective cover of heavier, relatively inflexible material.",
+        "price":80000,
+        "image":[
+          "assets/book1.jpg",
+          "assets/book2.jpg",
+          "assets/book3.jpg"
+        ],
+        "rating":[
+          "1","2","2","2","31"
+        ]
+      }
+    ];
+    function rating(arr){
+      let current = "";
+      let rating = "";
+      let arrRating = ["Buruk","Cukup","Baik","Sangat Baik","Super"];
+      arr.reverse();
+      arr.forEach((v,i)=>{
+        if(current !=""){
+          if(current > v){
+            rating = arrRating[i]
+          }
+        }
+        current = v;
+      })
+      return rating;
+    }
+    
+    let element = "";
+    data.forEach((v,i)=>{
+      element+='\
+      <div class="item">\
+        <div class="picture">\
+          <img class="thumb" src="'+data[i].image[0]+'"></img>\
+        </div>\
+        <div class="picture2">\
+          <img class="thumb" src="'+data[i].image[1]+'"></img>\
+        </div>\
+        <div class="picture3">\
+          <img class="thumb" src="'+data[i].image[2]+'"></img>\
+        </div>\
+        <div class="text">\
+          <div class="name">'+data[i].name+'</div>\
+          <div class="price">Rp.'+data[i].price+',-</div>\
+          <div class="description">'+data[i].description+'</div>\
+          <div class="rating">'+rating(data[i].rating)+'</div>\
+        </div>\
+      </div>\
+      ';
+    });
+    document.getElementById('item-list').innerHTML = element;
+  </script>
+</body>
+</html>
