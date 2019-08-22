@@ -54,7 +54,7 @@
     .input{
         display: flex;
         flex-direction: column;
-        background: #0F0;
+        background: #0F0;z
     }
 
     .wrapper{
@@ -126,6 +126,7 @@
             <div class="wrapper">
                 <div class="row">
                     <div class="square" onclick="calculator.hitung()">=</div>
+                    <div class="square" onclick="calculator.ubahDesimal()">.</div>
             </div>
     </div>
     </div>
@@ -139,6 +140,10 @@
                 const display =  document.getElementById('hasil')
                 const hasil = eval(display.innerHTML)
                 display.innerHTML = hasil
+            }
+
+            ubahDesimal() {
+                document.getElementById('hasil').innerHTML += '.';
             }
             hapus(){
                 document.getElementById('hasil').innerHTML = ''
