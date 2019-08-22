@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rest API Consumtion</title>
+    <style>
+        body{
+            margin: 0 auto;
+        }
+        
+        #display{
+            widows: 500px;
+            display: flex;
+        }
+        .name::before{
+            content: "Character Name: "
+        }
+        .wrapper{
+        flex: 1;
+        background: red;
+        flex-wrap: wrap;
+    
+        }
+        .gambar{
+            margin: 20px;
+            border-radius: 200px;    
+        }
+        .name.image#display{
+            width: 150px;
+            flex-wrap: wrap;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="display">
+
+    </div>
+    <script>
+        fetch('https://rickandmortyapi.com/api/character') 
+        .then((response)=>{
+            const retrieve = async() =>{
+                const data = await response.json()
+                const {results} = data
+                console.log(results)
+                for(let x in results){
+                    document.getElementById('display').innerHTML +='\
+                    <div class="wrapper">\
+                    <div class="gambar">\
+                        <image src="'+results[x].image+'" />\
+                    <div class="name">'+results[x].name+'</div>\
+                    </div>'
+                    
+            }
+        }
+            retrieve()
+           
+        })   
+    </script>
+</body>
+</html>
