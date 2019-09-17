@@ -13,5 +13,5 @@ const data2 = [
 ]
 
 data2.map((response) =>{
-    console.log(response.name);
+    console.log(response.name[1]);
 })
