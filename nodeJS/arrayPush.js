@@ -1,4 +1,4 @@
-const hewan = ['macan', 'kuda', 'kucing',], tambahan = ['buaya', 'beruang',{obj: 'rusa'}]
+const hewan = ['mac', 'kuda', 'kucing',], tambahan = ['buaya', 'beruang',{obj: 'rusa'}]
 const arrayPushHewan = async() => {
     await tambahan.map(res => hewan.push(res))
     console.log(hewan);

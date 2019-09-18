@@ -6,3 +6,7 @@ const arrayPushHewan = async() => {
 }
 
 arrayPushHewan();
+
+/* NOTE :
+Array pop adalah fungsi array untuk mengahpus index/elemnt terakhir dari sebuah array
+*/
